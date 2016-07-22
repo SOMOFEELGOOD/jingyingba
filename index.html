@@ -1,60 +1,70 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    <style>
-
-    </style>
-   
-  </head>
-  <body>
-    sdfdfasdfasdffsdfas
-
-
-    1.viewport（meta:vp）
-2.设计稿尺寸【750*1334 iphone6 640 * 1136 iphone5】，主流手机分辨率
-3.设宽（百分比）不设高，宽度使用百分比，高度不设置，由内容撑开。
-4.哪些可以直接使用高度？最多只有一行内容的，以及icon图标，字体，可以固定高度，不过要减半，使用到了固定像素，减半就好了
-
-5.html{font:10px/1.5 helvetica,arial,"Microsoft Yahei"} 
-字体统一使用rem,rem是相对根元素来计算的，如1.2rem -》12px
-
-6. 触碰a元素会自带阴影，如果不需要，可以设置-webkit-tap-highlight-color:transparent
-
-7.点透
-点透现象，点击蒙层，让蒙层消失，会触发蒙层下面的a链接，或者其他元素的点击事件（如果有的话）
-原因：是使用了touchstart事件
-
-click比touchstart事件有300ms延迟,原因是浏览器需要一个时间来判断用户是否有下一步的操作【例：双击】
-
-不要有延迟，也不要触发点透现象
-faskclick.js
-引入faskclick.js
-window.addEventListener('load', function() {
-  FastClick.attach(document.body);
-}, false);
-之后就直接用click事件，不需要用touchstart
-
-http://amazeui.org/1.x/javascript/fastclick/
-
-8.弹窗出来之后不能滑动页面，使用到的事件是touchmove,
-给document的该事件阻止默认事件，就不能够滑动了;
-document.addEventListener("touchmove", eventDefault,false)
-function eventDefault(e) {
-  e.preventDefault();
-}
-弹窗消失时，又能够重新滑动，必须移除上面绑定的默认事件
-document.removeEventListener("touchmove", eventDefault,false)
-
-9.当弹窗中包含输入表单的时候，不要用fixed，因为虚拟键盘会挡住用户输入。用absolute,top,left尽量使用px值
-
-10. a里边的href = "javascript:void(0);"
-这样写javascript:;有些浏览器会有问题
-
-11.短信，电话
-a href="sms:10086" a href = "tel:1233444"
-    
-  <script>
- 
- </script>
-    </body>
-  </html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style type="text/css">
+			body{
+				background-color: #f5f5f5;
+			}
+			nav{
+				height: 90px;
+				background-color: #ffffff;
+				margin-bottom: 24px;
+			}
+			nav p{
+				width: 1224px;
+				height: 90px;
+				line-height: 90px;
+/*				background-color: red;*/
+				margin: auto;
+				
+			}
+			nav p {
+				
+			}
+			.main{
+				width: 1224px;
+				height: 1500px;
+				background-color: red;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<p>
+				<a href=""><img src="img/index/logo.png"/></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+				<a href=""></a>
+			</p>
+		</nav>
+		
+		
+		<div class="main">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+		
+		
+		
+	</body>
+</html>
