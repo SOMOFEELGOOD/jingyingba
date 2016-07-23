@@ -228,7 +228,7 @@
 			.online_c li:nth-child(5):before{
 				background-position: 0px -271px;
 			}
-			header h2{
+			.main h2{
 				margin-top: 35px;
 				margin-bottom: 20px;
 				font-size: 24px;
@@ -320,7 +320,7 @@
 				margin-top: 25px;
 				margin-bottom: 15px;
 			}
-			header h2 span{
+			.main h2 span{
 				font-size: 22px;
 				color: gray;
 				margin-left: 30px;
