@@ -54,4 +54,29 @@ $(function(){
 		$(this).addClass("activeBTN").siblings().removeClass("activeBTN")
 	})
 	}
+	
+//	合作机构
+	$(".he_right").click(function(){
+		$(".hezuo ul").stop().animate({
+			left:0
+		},200,function(){
+			$(".hezuo ul").css({left:-167})
+			$(".hezuo ul li:last").insertBefore($(".hezuo ul li:first"))
+
+		})
+
+		})
+		$(".he_left").click(function(){
+		$(".hezuo ul").stop().animate({
+			left:-334
+		},200,function(){
+			$(".hezuo ul").css({left:-167})
+			$(".hezuo ul li:first").insertBefore($(".hezuo ul li:last"))
+
+		})
+		})
+	
+	
+	
+	
 })	
