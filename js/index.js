@@ -77,6 +77,29 @@ $(function(){
 		})
 	
 	
-	
+//	滚轴事件
+		function scroll_lachuan(){
+		var w =( document.body.offsetWidth -1224 )/2-80
+		if(document.body.offsetWidth<1224){
+			$(".scroll").css({
+				right:-60
+			})
+			}else if(document.body.offsetWidth>1224){
+				$(".scroll").css({
+				right:w
+			})
+		}
+		}	
+		scroll_lachuan()
+			
+		window.onresize=function(){
+		scroll_lachuan()
+		
+		}
+		$(".scroll_btn").click(function(){
+		$("html,body").animate({
+			scrollTop:0
+		},200)
+		})
 	
 })	
