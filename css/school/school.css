@@ -188,23 +188,13 @@ body {
 .class_info2 .c_info1,
 .class_info2 .c_info2 {
 	text-indent: 2rem;
+	background: url('../../img/index/15ico_bg.png') no-repeat;
 }
-.class_info2 .c_info1:before,
-.class_info2 .c_info2:before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 50%;
-	margin-top: -6px;
-	width: 12px;
-	height: 12px;
-	background: url('../../img/index/15ico_bg.png') no-repeat;	
+.class_info2 .c_info1 {
+	background-position: 0px -606px;
 }
-.class_info2 .c_info1:before {
-	background-position: center -609px;
-}
-.class_info2 .c_info2:before {
-	background-position: -1px -681px;
+.class_info2 .c_info2 {
+	background-position: -1px -678px;
 }
 .class_info2 .c_info3,
 .class_info2 .c_info4 {
@@ -272,19 +262,11 @@ body {
 .school_right h3 {
 	position: relative;
 	margin-bottom: 25px;
-	text-indent: 2.4rem;	
-}
-.school_right h3:before {
-	content: "";
-	position: absolute;
-	left: 0;
-	width: 20px;
-	height: 100%;
-	background: url('../../img/index/15ico_bg.png') no-repeat;
-	
+	text-indent: 2.4rem;
+	background: url('../../img/index/15ico_bg.png') no-repeat;	
 }
 /*学校地址 地图*/
-.school_map h3:before {
+.school_map h3 {
 	background-position: 2px -822px;
 }
 .school_map div {
@@ -296,7 +278,7 @@ body {
 	position: relative;
 	margin-top: 15px;
 }
-.school_hot h3:before {
+.school_hot h3{
 	background-position: 4px -651px;
 }
 .school_more {
