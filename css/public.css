@@ -6,6 +6,7 @@
 				float: left;
 				font-size: 16px;
 				line-height: 90px;
+				color: #333;
 			}
 			nav ul li a:hover{
 				color: #29b572;
@@ -138,12 +139,10 @@
 			
 			nav ul{
 				height: 90px;
-				display: inline-block;
 				float: left;
 			}
 			nav ul li{
 				height: 90px;
-				display: inline-block;
 				float: left;
 				margin-right: 45px;
 			}
