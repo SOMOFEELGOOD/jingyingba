@@ -9,12 +9,12 @@
 </head>
 <body>
 	<!-- 导航栏 -->
-	<nav>
+	<div id="nav">
 		<div class="nav_div">
-			<a href="" class="logo"><img src="../img/index/logo.png"/></a>
+			<a href="../index.html" class="logo"><img src="../img/index/logo.png"/></a>
 			<img src="../img/index/113200.png" class="faxian"/>
 			
-			<a href="javascript:void()" id="address">
+			<a href="javascript:void(0);" id="address">
 				<span class="change">北京</span>
 				<div class="city clearfix">
 					<div><img src="../img/index/city1.png"/><span>北京</span><p class="meng"></p></div>
@@ -27,21 +27,21 @@
 				</div>
 			</a>
 			<ul class="clearfix">
-				<li><a href="">首页</a></li>
-				<li><a href="">线下课程</a></li>
-				<li><a href="">在线课程</a></li>
-				<li><a href="">学校</a></li>
-				<li><a href="">互联网头条</a></li>
-				<li><a href="">+提问</a></li>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="../offline_course/offline.html">线下课程</a></li>
+				<li><a href="../online_course/class_list.html">在线课程</a></li>
+				<li><a href="school.html">学校</a></li>
+				<li><a href="javascript:void(0);">互联网头条</a></li>
+				<li><a href="javascript:void(0);">+提问</a></li>
 			</ul>
 			<ol>
-				<li><a href="">注册</a></li>
+				<li><a href="../login/login.html">注册</a></li>
 				<li>
-					<a href="">登录</a>
+					<a href="../login/login.html">登录</a>
 				</li>
 			</ol>
 		</div>
-	</nav>
+	</div>
 	<!-- 学校 -->
 	<div class="school_info_main clearfix">
 		<div class="school_left">
@@ -61,7 +61,7 @@
 						<p class="s_num"><span>87</span>人报名</p>
 						
 					</div>					
-					<a class="reservation" href="">预约咨询</a>
+					<a class="reservation" href="javascript:void(0);">预约咨询</a>
 				</div>
 			</div>
 			<div class="school_left_btm">
@@ -282,7 +282,7 @@
 		</div>
 	</div>
 	<!-- 底栏 -->
-	<footer>
+	<div id="footer">
 		<div class="footer">
 			<div class="friend_line_bar clearfix">
 				<h2>友情链接</h2>
@@ -295,7 +295,7 @@
 					<li><a href="javascript:void(0);">蓝鸥科技</a></li>
 				
 				</ul>
-				<a class="more_btn" href="index/friend_line.html">更多</a>
+				<a class="more_btn" href="../index/friend_line.html">更多</a>
 			</div>
 			<div class="footer_info clearfix">
 				<div class="f_info_list">
@@ -348,16 +348,9 @@
 			</div>
 		</div>
 		<div class="company_name">蓝鸥科技有限公司©1997-2016 | 北京市海淀区清河毛纺路路南甲36号金五星商业大厦5层</div>
-	</footer>
+	</div>
 	<script src="../js/lib/jquery.min.js"></script>
-	<script>
-		$(function() {
-			$(".info_tab li").click(function() {
-				var index = $(this).index();
-				$(this).addClass("active").siblings().removeClass("active");
-				$(".info_list>div").eq(index).show().siblings().hide();
-			})
-		})
-	</script>
+	<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/school_info.js"></script>
 </body>
 </html>

@@ -6,17 +6,14 @@
 		<link rel="stylesheet" type="text/css" href="css/base.css"/>
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index/index.css"/>
-		<link rel="stylesheet" type="text/javascript" href="js/index.js"/>
-		<style type="text/css">
-		</style>
 	</head>
 	<body>
-		<div class="nav_Nav">
+		<div id="nav">
 			<div class="nav_div">
 				<a href="index.html" class="logo"><img src="img/index/logo.png"/></a>
 				<img src="img/index/113200.png" class="faxian"/>
 				
-				<a href="javascript:void()" id="address">
+				<a href="javascript:void(0);" id="address">
 					<span class="change">北京</span>
 					<div class="city clearfix">
 						<div><img src="img/index/city1.png"/><span>北京</span><p class="meng"></p></div>
@@ -31,15 +28,15 @@
 				<ul class="clearfix">
 					<li><a href="index.html">首页</a></li>
 					<li><a href="offline_course/offline.html">线下课程</a></li>
-					<li><a href="school/school.html">在线课程</a></li>
-					<li><a href="">学校</a></li>
-					<li><a href="">互联网头条</a></li>
-					<li><a href="">+提问</a></li>
+					<li><a href="online_course/class_list.html">在线课程</a></li>
+					<li><a href="school/school.html">学校</a></li>
+					<li><a href="javascript:void(0);">互联网头条</a></li>
+					<li><a href="javascript:void(0);">+提问</a></li>
 				</ul>
 				<ol>
-					<li><a href="">注册</a></li>
+					<li><a href="login/login.html">注册</a></li>
 					<li>
-						<a href="">登录</a>
+						<a href="login/login.html">登录</a>
 					</li>
 				</ol>
 			</div>
@@ -68,9 +65,9 @@
 			<br />
 			<span>欢迎来到精英吧</span>
 			<br />
-			<a href="####" class="a_active">登录</a>
+			<a href="login/login.html" class="a_active">登录</a>
 			&nbsp;
-			<a href="####">注册</a>
+			<a href="login/login.html">注册</a>
 			</div>
 			
 			</div>
@@ -224,8 +221,8 @@
 		
 
 	   </div>
-	 
-	   <footer>
+	 	<!-- 底部 -->
+	   <div id="footer">
 			<div class="footer">
 				<div class="friend_line_bar clearfix">
 					<h2>友情链接</h2>
@@ -236,9 +233,8 @@
 						<li><a href="javascript:void(0);">蓝鸥科技</a></li>
 						<li><a href="javascript:void(0);">蓝鸥科技</a></li>
 						<li><a href="javascript:void(0);">蓝鸥科技</a></li>
-					
 					</ul>
-					<a class="more_btn" href="friend_line.html">更多</a>
+					<a class="more_btn" href="index/friend_line.html">更多</a>
 				</div>
 				<div class="footer_info clearfix">
 					<div class="f_info_list">
@@ -291,7 +287,7 @@
 				</div>
 			</div>
 			<div class="company_name">蓝鸥科技有限公司©1997-2016 | 北京市海淀区清河毛纺路路南甲36号金五星商业大厦5层</div>
-		</footer>
+		</div>
 		
 		
 		<div class="scroll">
@@ -306,7 +302,7 @@
 			<div class="scroll_btn"><img src="img/index/returntotop.png"/></div>
 		</div>
 		<script src="js/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/lib/selectivizr-min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="js/lib/selectivizr-min.js" type="text/javascript" charset="utf-8"></script> -->
 		<script src="js/index.js" type="text/javascript" charset="utf-8">
 		</script>
 
