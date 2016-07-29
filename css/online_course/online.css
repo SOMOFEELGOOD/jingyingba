@@ -34,7 +34,7 @@
 			content: "";
 			width: 15px;
 			height: 19px;
-			background: url(../../img/index/15ico_bg.png);
+			background: url(../img/index/15ico_bg.png);
 			background-position: 0px -628px;
 			margin-top: 3px;
 			
@@ -44,7 +44,7 @@
 			content: "";
 			width: 15px;
 			height: 15px;
-			background: url(../../img/index/15ico_bg.png);
+			background: url(../img/index/15ico_bg.png);
 			background-position: 0px 98px;
 		}
 		.span3{
@@ -52,7 +52,7 @@
 			content: "";
 			width: 15px;
 			height: 15px;
-			background: url(../../img/index/15ico_bg.png);
+			background: url(../img/index/15ico_bg.png);
 			background-position: 0px 120px;
 		}
 		.offline_tab_U{
@@ -92,132 +92,13 @@
 .school_right_h a:nth-child(1){
 	font-size: 16px;
 }
-<<<<<<< Updated upstream
-.class_info1 span.online {
-	color: #29b572;
-	border: 1px solid #29b572;
-	
-}
-.class_info1 span.offline {
-	color: #ea9b65;
-	border: 1px solid #ea9b65;
-}
-.class_info1 span:last-child {
-	float: right;
-	font-size: 20px;
-	color: #ea9b65;
-}
-/*课程相关：学校、时长等*/
-.class_info2 p {
-	position: relative;
-	float: left;
-	margin-right: 30px;
-	font-size: 14px;
-	color: #999;
-}
-.class_info2 .c_info1,
-.class_info2 .c_info2 {
-	text-indent: 2rem;
-	background: url('../../img/index/15ico_bg.png') no-repeat;
-}
-.class_info2 .c_info1 {
-	background-position: 0px -606px;
-}
-.class_info2 .c_info2 {
-	background-position: -1px -678px;
-}
-.class_info2 .c_info3,
-.class_info2 .c_info4 {
-	margin-left: 30px;
-}
-.class_info2 .c_info3 span,
-.class_info2 .c_info4 span {
-	color: #3faf7a;
-}
-.class_info2 .c_info5 {
-	float: right;
-	margin-right: 0;
-}
-/*学校简介*/
-.info_list {
-	padding: 0 30px;
-}
-.info_list>div {
-	display: none;
-}
-.school_profile h3 {
-	line-height: 80px;
-	text-align: center;
-	font-weight: 900;
-}
-.school_profile p {
-	line-height: 36px;
-	text-indent: 3.2rem;
-	font-size: 14px;
-}
-/*官方相册*/
-.photo_list {
-	width: 100%;
-	margin-bottom: 30px;
-	box-sizing: border-box;
-}
-.photo_list li {
-	float: left;
-	width: 196px;
-	height: 130px;
-	margin-right: 23px;
-	margin-bottom: 25px;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-}
-.photo_list li:nth-child(4n) {
-	margin-right: 0;
-}
-.photo_list li img {
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-
-/*学校右侧部分*/
-.school_right {
-	float: right;
-	width: 296px;
-}
-.school_right>div {
-	background-color: #fff;
-	padding: 25px 15px;
-}
-.school_right h3 {
-	position: relative;
-	margin-bottom: 25px;
-	text-indent: 2.4rem;
-	background: url('../../img/index/15ico_bg.png') no-repeat;	
-}
-/*学校地址 地图*/
-.school_map h3 {
-	background-position: 2px -822px;
-}
-.school_map div {
-	width: 265px;
-	height: 160px;
-}
-/*热门学校*/
-.school_hot {
-	position: relative;
-	margin-top: 15px;
-}
-.school_hot h3{
-	background-position: 4px -651px;
-=======
 .school_right_h a:nth-child(1):before{
 	/*font-size: 15px;*/
 	content: "";
 	width: 20px;
 	height: 20px;
 	float: left;
-	background: url(../../img/index/15ico_bg.png) no-repeat center;
+	background: url(../img/index/15ico_bg.png) no-repeat center;
 	background-position: 0px -652px;
 	margin-top: 15px;
 	
@@ -225,7 +106,6 @@
 .school_hot {
 	position: relative;
 	margin: 0 15px;
->>>>>>> Stashed changes
 }
 .school_more {
 	float: right;

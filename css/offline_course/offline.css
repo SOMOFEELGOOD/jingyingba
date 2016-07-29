@@ -127,6 +127,41 @@
 		.offtab_act{
 			color: #00b26c;
 		}
+		
+		/*//*/
+		
+		.off_icon:after{
+			content: "";
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			top:17px;
+		}
+		.off_icon1:after{
+			background: url(../../img/index/15ico_bg.png);
+			background-position: 0px -848px;
+		}
+		.off_icon3:after{
+			background: url(../../img/index/15ico_bg.png);
+			background-position: 0px -848px;
+		}
+		.off_icon2:after{
+			background: url(../../img/jiage_arrow.png) no-repeat center;
+		}
+		.offtab_act.off_icon2:after{
+			background: url(../../img/jiage_arrow_g.png) no-repeat center;
+		}
+		.offtab_act.off_icon1:after{
+			background: url(../../img/index/15ico_bg.png);
+			background-position: 0px -866px;
+		}
+		.offtab_act.off_icon3:after{
+			background: url(../../img/index/15ico_bg.png);
+			background-position: 0px -866px;
+		}
+		/*//*/
+		
+		
 		.off_num{
 			width: 600px;
 			height: 35px;
