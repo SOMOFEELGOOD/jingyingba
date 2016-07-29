@@ -1,23 +1,9 @@
 html,body {
 	background-color: #f5f5f5;
 }
-header {
-	width: 100%;
-	height: 90px;
-	background-color: #fff;
-}
-.head_left {
-	float: left;
-}
-nav ul li {
-	float: left;
-}
-.head_right {
-	float: right;
-}
 /*************中部内容***************/
 
-section {
+.section {
 	width: 1224px;
 	margin: 0 auto;
 	/*background-color: #fff;*/
@@ -139,9 +125,16 @@ section {
 	  	.sel_right {
 	  		display: none;
 	  		float: right;
-	  		margin-left: 15px;
 	  		width: 1039px;
 	  		background-color: #fff;
+	  	}
+	  	/**************修改******************/
+	  	.sel_nav {
+	  		width: 100%;
+	  		height: 64px;
+	  		background-color: #fff;
+	  		border-bottom: 1px solid #e8e8e8;
+	  		background-color: #fafafa;
 	  	}
 		.sel_nav li {
 			float: left;
@@ -152,27 +145,36 @@ section {
 			text-align: center;
 		}
 		.chart {
+			/**********修改*****************/
+			display: none;
+			width: 979px;
 			padding:0 30px;
+			padding-top: 20px;
 			color: #333333;
 			font-size: 16px;
 		}
+		.act1 {
+			background-color: #fff;
+		}
+		.sel_tip {
+	  		width: 1039px;
+	  		height: 375px;
+	  		margin: auto;
+	  		text-align: center;
+			vertical-align: middle;
+			line-height:187.5px;
+	  	}
 /********我的学习曲线r1********/
 	.r1 .chart {
-		width: 100%;
-		padding: 0;
+		width: 1039px;
 		height: 650px;
 	}
 /********我所在的班级r2********/
 	.r2 .chart {
-			width: 1039px;
-			padding: 0;
-			height: 650px;
+		width: 1039px;
+		height: 650px;
 		}		
 /*********我的作业r3**********/
-	.r3 .sel_nav {
-		background-color: #fafafa;
-		border-bottom: 1px solid #e8e8e8;
-	}
 	.r3 .chart {
 			padding-left: 30px;
 			color: #333333;
@@ -200,6 +202,7 @@ section {
 			background-color: #eef9f4;
 		}
 		.chart_list .sp3 {
+			margin-right: 15px;
 			display: block;
 			width: 50px;
 			position: relative;
@@ -274,6 +277,7 @@ section {
 	.r5 h2 {
 		padding: 20px 0;
 		padding-left: 50px;
+		box-sizing: border-box;
 		font-size: 14px;
 		color: #c6c6c6;
 		border-bottom: 1px solid #f2f2f2;

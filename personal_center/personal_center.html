@@ -16,7 +16,7 @@
 			<a href="" class="logo"><img src="../img/index/logo.png"/></a>
 			<img src="../img/index/113200.png" class="faxian"/>
 			
-			<a href="javascript:void()" id="address">
+			<a href="javascript:void(0);" id="address">
 				<span class="change">北京</span>
 				<div class="city clearfix">
 					<div><img src="../img/index/city1.png"/><span>北京</span><p class="meng"></p></div>
@@ -45,7 +45,7 @@
 		</div>
 	</nav>
 <!-- 中部内容 -->
-	<section>
+	<div class="section">
 		<div class="sec clearfix">
 			<div class="sec_left">
 				<img src="../img/index/headportrait.png">
@@ -99,7 +99,9 @@
 					<li>iOS课程</li>
 					<li>Android课程</li>
 				</ul>
-				<!-- <p>学习曲线：（你当前所在班级为<span>A</span>班）</p> -->
+				<div class="sel_tip">
+					<p>未来这里是收藏你的作业的地方<br>将包含你的作业内容，作业完成时间，作业评价等状态，<a href="javascript:void(0);" class="link_ios">挑选一门课程</a>，开始学习吧！</p>
+				</div>
 				<div class="chart" id="chart1">
 				</div>
 			</div>
@@ -109,6 +111,9 @@
 					<li>iOS课程</li>
 					<li>Android课程</li>
 				</ul>
+				<div class="sel_tip">
+					<p>未来这里是收藏你的作业的地方<br>将包含你的作业内容，作业完成时间，作业评价等状态，<a href="javascript:void(0);" class="link_ios">挑选一门课程</a>，开始学习吧！</p>
+				</div>
 				<div class="chart" id="chart2">
 					
 				</div>
@@ -119,7 +124,10 @@
 					<li>iOS课程</li>
 					<li>Android课程</li>
 				</ul>
-				<div class="chart">
+				<div class="sel_tip">
+					<p>未来这里是收藏你的作业的地方<br>将包含你的作业内容，作业完成时间，作业评价等状态，<a href="javascript:void(0);" class="link_ios">挑选一门课程</a>，开始学习吧！</p>
+				</div>
+				<div class="chart ch1">
 					<div class="classes">
 						<h2>第一课 ~ 第十课</h2>
 						<ul class="sec_list chart_list">
@@ -243,6 +251,7 @@
 						</ul>
 					</div>
 				</div>
+				<div class="chart ch2">2</div>
 			</div>
 <!-- 账号设置 -->
 			<div class="sel_right r4">
@@ -341,7 +350,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 
 <!-- 尾部 -->
 	<footer>
@@ -411,22 +420,31 @@
 		</div>
 		<div class="company_name">蓝鸥科技有限公司©1997-2016 | 北京市海淀区清河毛纺路路南甲36号金五星商业大厦5层</div>
 	</footer>
-	 <script type="text/javascript" src="../js/lib/echarts.min.js"></script>
+	<script type="text/javascript" src="../js/lib/echarts.min.js"></script>
+	<script type="text/javascript" src="../js/lib/jquery.min.js"></script>
 	<script type="text/javascript">
-		var list =document.querySelectorAll(".sel_list li");
-		var blist = document.querySelectorAll(".sel_right");
-		for (var i = 0; i < list.length; i++) {
-			list[i].index = i;
-			list[i].onclick = function(){	
-				for (var j = 0; j < list.length; j++) {
-					list[j].className = "";
-					blist[j].style.display = "none";
-				}				
-				list[this.index].className = "active";
-				blist[this.index].style.display = "block";
-				
-			}
-		}
+		var list =$(".sel_list li");
+		var blist =$(".sel_right");
+			list.on("click",function(){	
+				var index=$(this).index();
+				$(this).addClass('active').siblings().removeClass('active');
+				blist.hide().eq(index).show();	
+			})
+		/*****************************/
+		$('.sel_right .sel_nav li').on('click',function(){
+				var index=$(this).index();
+				$(this).parents(".sel_right").find(".sel_tip").hide();
+				$(this).parents(".sel_right").find(".chart").hide().eq(index).show();
+				$(this).addClass('act1').siblings().removeClass('act1')
+			})
+
+			$(".link_ios").click(function(){
+				$(".IOS").trigger("click");
+				$(this).parents(".sel_tip").css({
+					display:"none",
+				})
+			})
+		/*****************************/
 		var chart1 = echarts.init(document.getElementById('chart1'));
 			option1 = {
 			    title: {
@@ -466,10 +484,15 @@
 			    	text:"天数",
 			        data: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],
 			        axisTick: {
-			                alignWithLabel: true
+			        	inside:true,
+			            alignWithLabel: true
 			            }
 			    },
-			    yAxis: {},
+			    yAxis: {
+			    	axisTick: {
+			        	inside:true,
+			            }
+			    },
 			//表内数据
 			    series: [{
 			        name: '销量',
@@ -519,7 +542,7 @@
 			        data: [60, 50, 40, 30, 20, 10]
 			    }],   
 			};
-			 chart2.setOption(option2);
+			chart2.setOption(option2);
 
 	</script>	
 </body>
