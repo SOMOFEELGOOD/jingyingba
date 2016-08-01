@@ -5,6 +5,10 @@
 	<title>个人中心</title>
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+<<<<<<< Updated upstream
+=======
+	<!-- <link rel="stylesheet" type="text/javascript" href="../js/index.js"/> -->
+>>>>>>> Stashed changes
 	<link rel="stylesheet" type="text/css" href="../css/personal_center/center.css">
 </head>
 <body>
@@ -83,7 +87,7 @@
 		<div class="sel clearfix">
 			<div class="sel_left">
 				<ul class="sel_list">
-					<li class="active">我的学习曲线</li>
+					<li class="act">我的学习曲线</li>
 					<li>我所在的班级</li>
 					<li>我的作业</li>
 					<li>账号设置</li>
@@ -258,38 +262,18 @@
 					<ul class="setting_detail">
 						<li>
 							<span class="p1">当前密码:</span>
-							<input type="text">
-						</li>
-						<li>
-							<span class="p1">新密码:</span>
-							<input type="text">
-							<span class="p2">密码长度在6-32个字符之间</span>
-						</li>
-						<li>
-							<span class="p1">再次确认密码:</span>
-							<input type="text">
-						</li>
-					</ul>
-					<div id="submit">
-						<input type="submit" value="提交">
-					</div>
-				</div>
-				<div class="setting">
-					<p>请重设您的账号密码</p>
-					<ul class="setting_detail">
-						<li>
-							<span class="p1">当前密码:</span>
-							<input type="text">
+							<input type="text" id="input1">
 							<span class="p3">请输入当前密码</span>
 						</li>
 						<li>
 							<span class="p1">新密码:</span>
-							<input type="text">
+							<input type="text" id="input2">
+							<span class="p2">密码长度在6-32个字符之间</span>
 							<span class="p3">不能与原密码相同</span>
 						</li>
 						<li>
 							<span class="p1">再次确认密码:</span>
-							<input type="text">
+							<input type="text" id="input3">
 							<span class="p3">密码输入不一致</span>
 						</li>
 					</ul>
@@ -419,8 +403,136 @@
 		<div class="company_name">蓝鸥科技有限公司©1997-2016 | 北京市海淀区清河毛纺路路南甲36号金五星商业大厦5层</div>
 	</div>
 	<script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<<<<<<< Updated upstream
 	<script type="text/javascript" src="../js/lib/echarts.min.js"></script>
 	<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/personal_center.js" type="text/javascript" charset="utf-8"></script>
+=======
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript">
+		var list =$(".sel_list li");
+		var blist =$(".sel_right");
+			list.on("click",function(){	
+				var index=$(this).index();
+				$(this).addClass('act').siblings().removeClass('act');
+				blist.hide().eq(index).show();	
+			})
+		/*****************************/
+		$('.sel_right .sel_nav li').on('click',function(){
+				var index=$(this).index();
+				$(this).parents(".sel_right").find(".sel_tip").hide();
+				$(this).parents(".sel_right").find(".chart").hide().eq(index).show();
+				$(this).addClass('act1').siblings().removeClass('act1')
+			})
+
+			$(".link_ios").click(function(){
+				$(".IOS").trigger("click");
+				$(this).parents(".sel_tip").css({
+					display:"none",
+				})
+			})
+		/*****************************/
+		var chart1 = echarts.init(document.getElementById('chart1'));
+			option1 = {
+			    title: {
+			        text: '学习曲线：（你当前所在班级为A班）',
+			        left: 'left'
+			    },
+			    tooltip: {},
+			    legend: {
+			        data:['分数','线性分数'],
+			        left: 'right'
+			    },
+			    grid: {
+			        left: '25px',
+			        right: '25px',
+			        bottom: '3%',
+			        containLabel: true
+			    },
+			/*******下边的范围拖动条*******/
+			   dataZoom: [
+				        {
+				            show: true,
+				            realtime: true,
+				            start: 30,
+				            end: 70,
+				            // xAxisIndex: [0, 1]
+				        },
+				        {
+				            type: 'inside',
+				            realtime: true,
+				            start: 30,
+				            end: 70,
+				            // xAxisIndex: [0, 1]
+				        }
+				    ],
+/******坐标轴*******/
+			    xAxis: {
+			    	name:"天数",
+			        data: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],
+			        axisTick: {
+			        	inside:true,
+			            alignWithLabel: true
+			            }
+			    },
+			    yAxis: {
+			    	name:"分数",
+			    	axisTick: {
+			        	inside:true,
+			            }
+			    },
+			//表内数据
+			    series: [{
+			        name: '分数',
+			        type: 'line',
+			        data: [5,"","","","","","","","","","","", 20, 36, 10, 10,"","","","","", 20]
+			    },{
+			        name: '线性分数',
+			        type: 'line',
+			        data: [60, 50, 40, 30, 20, 10]
+			    }],   
+			};
+			 chart1.setOption(option1);//输出图表
+
+		var chart2 = echarts.init(document.getElementById('chart2'));
+			option2 = {
+			    title: {
+			        text: '学习曲线：（你当前所在班级为A班）',
+			        left: 'left'
+			    },
+			    tooltip: {},
+			    legend: {
+			        data:['同学成绩','班级平均分'],
+			        left: 'right'
+			    },
+			    grid: {
+			        left: '25px',
+			        right: '25px',
+			        bottom: '3%',
+			        containLabel: true
+			    },
+			   
+			    xAxis: {
+			    	text:"天数",
+			        data: ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],
+			        axisTick: {
+			                alignWithLabel: true
+			            }
+			    },
+			    yAxis: {},
+			    series: [{
+			        name: '同学成绩',
+			        type: 'bar',
+			        data: [5,"","","","","","","","","","","", 20, 36, 10, 10,"","","","","", 20]
+			    },{
+			        name: '班级平均分',
+			        type: 'bar',
+			        data: [60, 50, 40, 30, 20, 10]
+			    }],   
+			};
+			chart2.setOption(option2);
+
+	</script>	
+>>>>>>> Stashed changes
 </body>
 </html>

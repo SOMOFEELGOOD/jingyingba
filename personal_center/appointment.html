@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>弹窗</title>
+    <title>预约信息弹窗</title>
     <link rel="stylesheet" type="text/css" href="../css/base.css">
     <style type="text/css">
 
@@ -105,70 +105,41 @@
 </head>
 <body>
     <button id="click">点击</button>
-<div id="mask">
-    <!-- 弹窗 -->
-    <div id="box">
-        <div class="tip clearfix">
-            <p>提示</p>
-            <a href="javascript:void(0);"></a>
+    <!-- 蒙层 -->
+    <div id="mask">
+        <!-- 弹窗 -->
+        <div id="box">
+            <div class="tip clearfix">
+                <p>提示</p>
+                <a href="javascript:void(0);"></a>
+            </div>
+            <ul class="message">
+                <li>留下您的联系电话，我们会在第一时间和您取得联系</li>
+                <li>
+                    <span>您的姓名：</span>
+                    <input type="text">
+                </li>
+                <li>
+                    <span>您的电话：</span>
+                    <input type="text">
+                </li>
+                <li>
+                    <span>意向课程：</span>
+                    <select>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="opel">Opel</option>
+                          <option value="audi">Audi</option>
+                    </select>
+                </li>
+            </ul>
+            <div>
+                <a href="javascript:void(0);" id="confirm">确定</a>
+                <a href="javascript:void(0);" id="cancle">取消</a>
+            </div>
+            
         </div>
-        <ul class="message">
-            <li>留下您的联系电话，我们会在第一时间和您取得联系</li>
-            <li>
-                <span>您的姓名：</span>
-                <input type="text">
-            </li>
-            <li>
-                <span>您的电话：</span>
-                <input type="text">
-            </li>
-            <li>
-                <span>意向课程：</span>
-                <select>
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="opel">Opel</option>
-                      <option value="audi">Audi</option>
-                </select>
-            </li>
-        </ul>
-        <div>
-            <a href="javascript:void(0);" id="confirm">确定</a>
-            <a href="javascript:void(0);" id="cancle">取消</a>
-        </div>
-        
     </div>
-<!-- 蒙层 -->
-</div>
-    <script type="text/javascript">
-    var click = document.getElementById("click");
-    var confirm = document.getElementById("confirm");
-    var shut = document.querySelector(".tip a");
-    var cancle = document.getElementById("cancle");
-    var box = document.getElementById("box")
-    click.onclick = function(){
-            document.getElementById("mask").style.display = "block";
-            document.getElementById("box").style.display = "block";
-            box.style.top = (document.documentElement.clientHeight - box.clientHeight)/2 + "px";
-        box.style.left = (document.documentElement.clientWidth - box.clientWidth)/2 + "px";
-        }
-    function close(){
-        document.getElementById("mask").style.display = "none";
-        document.getElementById("box").style.display = "none";
-    }
-    confirm.onclick = function(){
-        
-    }
-    cancle.onclick = function(){
-        close();
-    }
-    shut.onclick = function(){
-        close();
-    }
-    window.onresize = function(){
-        box.style.top = (document.documentElement.clientHeight - box.clientHeight)/2 + "px";
-        box.style.left = (document.documentElement.clientWidth - box.clientWidth)/2 + "px";
-    }
-    </script>
+    <script type="text/javascript" src="../js/lib/popup.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>弹窗</title>
+	<title>错误提示弹窗</title>
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<style type="text/css">
 
@@ -90,37 +90,20 @@
 </head>
 <body>
     <button id="click">点击</button>
-	<!-- 弹窗 -->
-	<div id="box">
-		<div class="tip clearfix">
-			<p>提示</p>
-			<a href="javascript:void(0);"></a>
+    <!-- 蒙层 -->
+	<div id="mask">
+		<!-- 弹窗 -->
+		<div id="box">
+			<div class="tip clearfix">
+				<p>提示</p>
+				<a href="javascript:void(0);"></a>
+			</div>
+			<div class="message">			
+				<span>很抱歉 , 该手机号不存在！</span>
+			</div>
+			<a href="javascript:void(0);" id="confirm">确定</a>
 		</div>
-		<div class="message">			
-			<span>很抱歉 , 该手机号不存在！</span>
-		</div>
-		<a href="javascript:void(0);" id="confirm">确定</a>
 	</div>
-<!-- 蒙层 -->
-	<div id="mask"></div>
-	<script type="text/javascript">
-	var click = document.getElementById("click");
-	var confirm = document.getElementById("confirm");
-	var cancle = document.querySelector(".tip a")
-	click.onclick = function(){
-			document.getElementById("mask").style.display = "block";
-			document.getElementById("box").style.display = "block";
-		}
-	function close(){
-		document.getElementById("mask").style.display = "none";
-		document.getElementById("box").style.display = "none";
-	}
-	confirm.onclick = function(){
-		close();
-	}
-	cancle.onclick = function(){
-		close();
-	}
-	</script>
+	<script type="text/javascript" src="../js/lib/popup.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>弹窗</title>
+	<title>非用户提示弹窗</title>
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 	<style type="text/css">
 
@@ -78,28 +78,31 @@
 </head>
 <body>
     <button id="click">点击</button>
-	<!-- 弹窗 -->
-	<div id="box">
-		<div class="tip clearfix">
-			<p>提示</p>
-			<a href="javascript:void(0);"></a>
+   <!-- 蒙层 -->
+	<div id="mask">
+		<!-- 弹窗 -->
+		<div id="box">
+			<div class="tip clearfix">
+				<p>提示</p>
+				<a href="javascript:void(0);"></a>
+			</div>
+			<div class="message">			
+				<p>欢迎使用精英家产品，精英产品包括精英家、精英吧和口袋精英。</p>
+				<p>您目前只有精英吧的使用权限。</p>
+				<p>请以后用此账户直接登录精英吧</p>
+			</div>
+			<a href="javascript:void(0);" id="confirm">确定</a>
 		</div>
-		<div class="message">			
-			<p>欢迎使用精英家产品，精英产品包括精英家、精英吧和口袋精英。</p>
-			<p>您目前只有精英吧的使用权限。</p>
-			<p>请以后用此账户直接登录精英吧</p>
-		</div>
-		<a href="javascript:void(0);" id="confirm">确定</a>
 	</div>
-<!-- 蒙层 -->
-	<div id="mask"></div>
 	<script type="text/javascript">
 	var click = document.getElementById("click");
 	var confirm = document.getElementById("confirm");
 	var shut = document.querySelector(".tip a")
 	click.onclick = function(){
-			document.getElementById("mask").style.display = "block";
-			document.getElementById("box").style.display = "block";
+		document.getElementById("mask").style.display = "block";
+		document.getElementById("box").style.display = "block";
+		box.style.top = (document.documentElement.clientHeight - box.clientHeight)/2 + "px";
+        box.style.left = (document.documentElement.clientWidth - box.clientWidth)/2 + "px";
 		}
 	function close(){
 		document.getElementById("mask").style.display = "none";
@@ -111,6 +114,10 @@
 	shut.onclick = function(){
 		close();
 	}
+	window.onresize = function(){
+        box.style.top = (document.documentElement.clientHeight - box.clientHeight)/2 + "px";
+        box.style.left = (document.documentElement.clientWidth - box.clientWidth)/2 + "px";
+    }
 	</script>
 </body>
 </html>
